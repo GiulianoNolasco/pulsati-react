@@ -22,11 +22,10 @@ export function Menu() {
       <header className="topo">
         <a onClick={pageMenu}>Menu</a>
         <a onClick={pageSaibamais}>Saiba mais</a>
-        <a href="pages/quemSomos.html" className="quemsomos">
-          Quem somos
-        </a>
-        <a href="pages/contatos.html">Contatos</a>
+        <a>Quem somos</a>
+        <a>Contatos</a>
       </header>
+
       {opcao == 1 ? <Home /> : <Saibamais />}
     </body>
   );
