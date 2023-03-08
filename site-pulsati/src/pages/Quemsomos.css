@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: min-content;
+}
+
+body {
+  overflow-x: hidden;
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------HEADER----------------------------------------- */
+
+.topo {
+  display: flex;
+  justify-content: left;
+  gap: 4rem;
+  margin: 5rem;
+  color: white;
+  align-items: center;
+  font-size: 25rem;
+  height: 10rem;
+  width: max-content;
+}
+
+.topo img {
+  width: 9rem;
+  height: 9rem;
+}
+
+.topo a {
+  color: rgb(216, 216, 216);
+  text-decoration: none;
+  width: max-content;
+  transition: 1s;
+}
+
+.topo a:hover {
+  color: rgb(10, 134, 134);
+}
+
+.quemsomos {
+  display: none;
+}
+
+/* ------------------------------------------HEADER----------------------------------------- */
+
+.tudo {
+  border: 5rem solid white;
+  min-height: 100vh;
+}
+
+.primeiraParte {
+  color: white;
+  margin: 10rem 10rem 0 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+.primeiraParte h1 {
+  font-size: 9rem;
+  transition: 1s;
+}
+
+.primeiraParte h1:hover {
+  font-size: 10rem;
+  color: rgb(10, 134, 134);
+}
+
+.primeiraParte h2 {
+  font-size: 7rem;
+  margin-top: 10rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.logo {
+  height: 16.75rem;
+  width: 40rem;
+  background: transparent;
+}
+
+.logo2 {
+  height: 15.75rem;
+  width: 40rem;
+  background: transparent;
+}
+
+.informacoes {
+  margin-top: 10rem;
+}
+
+.iconechevron i {
+  margin-top: 5rem;
+  font-size: 15rem;
+}
+
+.segtexto {
+  margin: 5rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1segtexto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.segtexto h1 {
+  font-size: 7rem;
+  margin-bottom: 5rem;
+  /* height: auto; */
+  color: white;
+}
+
+.textosegparteh2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  width: auto;
+  margin: 5rem;
+}
+.textosegparteh2 h2 {
+  text-align: justify;
+  font-size: 5rem;
+  margin-top: 3rem;
+}
+
+.segundaParte {
+  background-color: rgb(10, 134, 134);
+  margin: 10rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.imagemsegparte {
+  margin: 5rem;
+  height: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagemsegparte img {
+  height: 60rem;
+  width: 40rem;
+}
+
+.divbotao {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+
+.botaoInscrever {
+  height: 10rem;
+  width: 35rem;
+  font-size: 6rem;
+  margin-bottom: 10rem;
+  background-color: white;
+  color: rgb(10, 134, 134);
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.botaoInscrever:hover {
+  transition: 1.5s;
+  border: 0.5px solid white;
+  background-color: rgb(10, 134, 134);
+  color: white;
+}
+
+/* media query ------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 320px) {
+  * {
+    font-size: 15%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 568px) {
+  * {
+    font-size: 20%;
+  }
+
+  .textosegparteh2 h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  * {
+    font-size: 25%;
+  }
+  .textosegparteh2 h2 {
+    font-size: 4rem;
+  }
+
+  .topo {
+    font-size: 15rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  * {
+    font-size: 30%;
+  }
+  .textosegparteh2 h2 {
+    font-size: 4rem;
+  }
+
+  .topo {
+    font-size: 10rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  * {
+    font-size: 35%;
+  }
+  .textosegparteh2 h2 {
+    font-size: 4rem;
+  }
+
+  .topo {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1680px) {
+  * {
+    font-size: 40%;
+  }
+
+  .textosegparteh2 h2 {
+    font-size: 4.5rem;
+  }
+
+  .topo {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1681px) {
+  * {
+    font-size: 45%;
+  }
+
+  .textosegparteh2 h2 {
+    font-size: 4.5rem;
+  }
+  .segundaParte {
+    margin: 20rem;
+  }
+
+  .topo {
+    font-size: 7rem;
+  }
+}
