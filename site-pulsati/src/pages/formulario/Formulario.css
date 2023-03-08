@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 
 * {
   font-family: "Roboto", sans-serif;
@@ -9,19 +10,7 @@
   height: min-content;
 }
 
-body {
-  overflow-x: hidden;
-  background-size: cover;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  min-height: 100vh;
-}
-
 /* ------------------------------------------HEADER----------------------------------------- */
-
 .topo {
   display: flex;
   justify-content: left;
@@ -47,14 +36,35 @@ body {
 }
 
 .topo a:hover {
-  color: rgb(10, 134, 134);
+  color: rgb(197, 102, 197);
 }
-
-.quemsomos {
-  display: none;
-}
-
 /* ------------------------------------------HEADER----------------------------------------- */
+.mulheresdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mulheresdiv h1 {
+  font-size: 9rem;
+  width: max-content;
+  color: rgb(197, 102, 197);
+  font-family: "Bungee Shade", cursiva;
+  animation-name: aparecerDireita;
+  animation-duration: 3s;
+}
+
+@keyframes aparecerDireita {
+  from {
+    margin-left: 60%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
 
 .tudo {
   border: 5rem solid white;
@@ -78,8 +88,7 @@ body {
 }
 
 .primeiraParte h1:hover {
-  font-size: 10rem;
-  color: rgb(10, 134, 134);
+  color: rgb(250, 227, 230);
 }
 
 .primeiraParte h2 {
@@ -139,6 +148,7 @@ body {
 
 .textosegparteh2 {
   display: flex;
+  gap: 5rem;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
@@ -146,17 +156,34 @@ body {
   width: auto;
   margin: 5rem;
 }
-.textosegparteh2 h2 {
+.textosegparteh2 label {
   text-align: justify;
   font-size: 5rem;
   margin-top: 3rem;
 }
 
+input {
+  outline: none;
+  border-radius: 2rem;
+  height: 8rem;
+  width: 70rem;
+  font-size: 5rem;
+  transition: 1s;
+  background-color: white;
+  color: black;
+}
+/* 
+input:placeholder-shown {
+  background-color: black;
+  color: white;
+} */
+
 .segundaParte {
-  background-color: rgb(10, 134, 134);
+  background-color: rgb(250, 227, 230);
   margin: 10rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .imagemsegparte {
@@ -175,27 +202,32 @@ body {
 
 .divbotao {
   display: flex;
-  justify-content: space-evenly;
-  gap: 5rem;
+  justify-content: center;
+  gap: 15rem;
 }
 
 .botaoInscrever {
+  margin-top: 5rem;
   height: 10rem;
   width: 35rem;
   font-size: 6rem;
   margin-bottom: 10rem;
   background-color: white;
-  color: rgb(10, 134, 134);
+  color: black;
   border-radius: 1rem;
-  border: none;
+  border: 0.5px solid black;
   cursor: pointer;
 }
 
 .botaoInscrever:hover {
+  color: white;
   transition: 1.5s;
   border: 0.5px solid white;
-  background-color: rgb(10, 134, 134);
-  color: white;
+  background-color: black;
+}
+
+.textosegparteh2 i {
+  font-size: 5rem;
 }
 
 /* media query ------------------------------------------------------------------------------- */
@@ -213,6 +245,10 @@ body {
 
   .textosegparteh2 h2 {
     font-size: 4rem;
+  }
+
+  .topo {
+    font-size: 15rem;
   }
 }
 

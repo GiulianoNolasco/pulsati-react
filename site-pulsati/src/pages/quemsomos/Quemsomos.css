@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 
 * {
   font-family: "Roboto", sans-serif;
@@ -7,18 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* height: min-content; */
-}
-
-body {
-  overflow-x: hidden;
-  width: 100vw;
-  min-height: 100vh;
-  /* background-size: cover; */
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: min-content;
 }
 
 /* ------------------------------------------HEADER----------------------------------------- */
@@ -48,13 +36,14 @@ body {
 }
 
 .topo a:hover {
-  color: rgb(197, 102, 197);
+  color: rgb(10, 134, 134);
 }
-/* ------------------------------------------HEADER----------------------------------------- */
 
-.saibamais {
+.quemsomos {
   display: none;
 }
+
+/* ------------------------------------------HEADER----------------------------------------- */
 
 .tudo {
   border: 5rem solid white;
@@ -74,21 +63,12 @@ body {
 
 .primeiraParte h1 {
   font-size: 9rem;
-  width: max-content;
-  color: rgb(197, 102, 197);
-  font-family: "Bungee Shade", cursiva;
-  animation-name: aparecerDireita;
-  animation-duration: 3s;
+  transition: 1s;
 }
 
-@keyframes aparecerDireita {
-  from {
-    margin-left: 60%;
-  }
-
-  to {
-    margin-left: 0%;
-  }
+.primeiraParte h1:hover {
+  font-size: 10rem;
+  color: rgb(10, 134, 134);
 }
 
 .primeiraParte h2 {
@@ -97,37 +77,26 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
 .logo {
-  height: 9.75rem;
-  width: 25rem;
+  height: 16.75rem;
+  width: 40rem;
+  background: transparent;
 }
 
 .logo2 {
-  height: 8.75rem;
-  width: 25rem;
-}
-
-.logos {
-  margin: 10rem 10rem 10rem 10rem;
-  display: flex;
-  justify-content: center;
-  gap: 8rem;
+  height: 15.75rem;
+  width: 40rem;
+  background: transparent;
 }
 
 .informacoes {
-  margin-top: 5rem;
-  animation-name: aparecerEsquerda;
-  animation-duration: 3s;
-}
-
-@keyframes aparecerEsquerda {
-  from {
-    margin-right: 100%;
-  }
-
-  to {
-    margin-right: 0%;
-  }
+  margin-top: 10rem;
 }
 
 .iconechevron i {
@@ -139,28 +108,29 @@ body {
   margin: 5rem;
   width: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .h1segtexto {
-  width: 50%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  height: auto;
+  width: 50%;
 }
 
 .segtexto h1 {
   font-size: 7rem;
   margin-bottom: 5rem;
   /* height: auto; */
+  color: white;
 }
 
 .textosegparteh2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   height: auto;
   width: auto;
   margin: 5rem;
@@ -172,7 +142,7 @@ body {
 }
 
 .segundaParte {
-  background-color: rgb(250, 227, 230);
+  background-color: rgb(10, 134, 134);
   margin: 10rem;
   display: flex;
   justify-content: center;
@@ -196,44 +166,25 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 5rem;
-  animation-name: aparecerEsquerda;
-  animation-duration: 3s;
 }
 
 .botaoInscrever {
   height: 10rem;
-  width: max-content;
-  padding: 1rem;
+  width: 35rem;
   font-size: 6rem;
-  margin: 5rem;
+  margin-bottom: 10rem;
   background-color: white;
-  color: black;
+  color: rgb(10, 134, 134);
   border-radius: 1rem;
-  border: 0.5 solid black;
+  border: none;
   cursor: pointer;
 }
 
 .botaoInscrever:hover {
   transition: 1.5s;
   border: 0.5px solid white;
-  background-color: black;
+  background-color: rgb(10, 134, 134);
   color: white;
-}
-
-.mulheres {
-  height: 40rem;
-  width: 80rem;
-  animation-duration: 3s;
-  animation-name: aparecer;
-}
-
-@keyframes aparecer {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 0%;
-  }
 }
 
 /* media query ------------------------------------------------------------------------------- */
@@ -250,7 +201,7 @@ body {
   }
 
   .textosegparteh2 h2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -272,7 +223,7 @@ body {
     font-size: 30%;
   }
   .textosegparteh2 h2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .topo {
@@ -285,7 +236,7 @@ body {
     font-size: 35%;
   }
   .textosegparteh2 h2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .topo {

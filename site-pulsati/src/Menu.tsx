@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { Home } from "./pages/Home";
-import { Saibamais } from "./pages/Saibamais";
-import { Quemsomos } from "./pages/Quemsomos";
 import logo from "../src/assets/logo.png";
+import { Contatos } from "./pages/contatos/Contatos";
+import { Formulario } from "./pages/formulario/Formulario";
+import { Home } from "./pages/home/Home";
+import { Quemsomos } from "./pages/quemsomos/Quemsomos";
+import { Saibamais } from "./pages/saibamais/Saibamais";
+
+import "./Menu.css";
 
 export function Menu() {
   const [opcao, setOpcao] = useState<number>(1);
@@ -30,9 +34,9 @@ export function Menu() {
     } else if (opcao == 3) {
       return <Quemsomos />;
     } else if (opcao == 4) {
-      return <Saibamais />;
+      return <Contatos />;
     } else if (opcao == 5) {
-      return <Saibamais />;
+      return <Formulario />;
     }
   };
   return (
@@ -50,5 +54,3 @@ export function Menu() {
     </body>
   );
 }
-
-// opcao == 1 ? <Home /> : <Saibamais />
