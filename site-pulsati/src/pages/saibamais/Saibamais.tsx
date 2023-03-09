@@ -1,6 +1,10 @@
 import "./Saibamais.css";
-// import mulheresf from "../assets/mulheresf.png";
-export function Saibamais() {
+// import mulheresf from "../assets/mulhersf.png";
+
+interface SaibamaisProps {
+  setOpcao: (opcao: number) => void;
+}
+export function Saibamais(props: SaibamaisProps) {
   return (
     <div>
       <div className="tudo">
@@ -113,11 +117,21 @@ export function Saibamais() {
           </div>
 
           <div className="divbotao">
-            <a href="../pages/inscricao.html">
-              <button className="botaoInscrever">Inscreva-se</button>
+            <a>
+              <button
+                className="botaoInscrever"
+                onClick={() => props.setOpcao(5)}
+              >
+                Inscreva-se
+              </button>
             </a>
-            <a href="../index.html">
-              <button className="botaoInscrever">Voltar</button>
+            <a>
+              <button
+                className="botaoInscrever"
+                onClick={() => props.setOpcao(1)}
+              >
+                Voltar
+              </button>
             </a>
           </div>
         </div>

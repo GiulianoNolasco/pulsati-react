@@ -7,6 +7,7 @@ import { Quemsomos } from "./pages/quemsomos/Quemsomos";
 import { Saibamais } from "./pages/saibamais/Saibamais";
 
 import "./Menu.css";
+import { FormularioFinalizado } from "./pages/formularioFinalizado/FormularioFinalizado";
 
 export function Menu() {
   const [opcao, setOpcao] = useState<number>(1);
@@ -15,13 +16,15 @@ export function Menu() {
     if (opcao == 1) {
       return <Home setOpcao={setOpcao} />;
     } else if (opcao == 2) {
-      return <Saibamais />;
+      return <Saibamais setOpcao={setOpcao} />;
     } else if (opcao == 3) {
       return <Quemsomos />;
     } else if (opcao == 4) {
       return <Contatos />;
     } else if (opcao == 5) {
-      return <Formulario />;
+      return <Formulario setOpcao={setOpcao} />;
+    } else if (opcao == 6) {
+      return <FormularioFinalizado />;
     }
   };
   return (
@@ -33,7 +36,6 @@ export function Menu() {
         <a onClick={() => setOpcao(2)}>Saiba mais</a>
         <a onClick={() => setOpcao(3)}>Quem somos</a>
         <a onClick={() => setOpcao(4)}>Contatos</a>
-        <a onClick={() => setOpcao(5)}>Formulario</a>
       </header>
       {verificaQualPagina()}
     </body>

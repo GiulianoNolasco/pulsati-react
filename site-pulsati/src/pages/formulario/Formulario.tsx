@@ -1,6 +1,9 @@
 import "./Formulario.css";
 
-export function Formulario() {
+interface formularioProps {
+  setOpcao: (opcao: number) => void;
+}
+export function Formulario(props: formularioProps) {
   return (
     <div>
       <div className="mulheresdiv">
@@ -27,8 +30,13 @@ export function Formulario() {
         </div>
 
         <div className="divbotao">
-          <a href="../pages/inscricaoconcluida.html">
-            <button className="botaoInscrever">Inscrever-se</button>
+          <a>
+            <button
+              className="botaoInscrever"
+              onClick={() => props.setOpcao(6)}
+            >
+              Inscrever-se
+            </button>
           </a>
         </div>
       </div>

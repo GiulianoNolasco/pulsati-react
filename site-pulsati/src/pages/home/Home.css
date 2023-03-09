@@ -19,13 +19,17 @@
   }
 }
 
-.tudo {
-  /* border: 5rem solid white; */
+.tudoHome {
   min-height: 100vh;
+  display: flex;
+  justify-content: left;
+  height: 90%;
 }
+
 .ladoEsquerdo img {
   width: 90rem;
 }
+
 .topo {
   display: flex;
   justify-content: left;

@@ -6,7 +6,7 @@ interface MenuProps {
 
 export function Home(props: MenuProps) {
   return (
-    <div className="tudo">
+    <div className="tudoHome">
       <main className="corpo">
         <div className="ladoEsquerdo">
           <h1>
