@@ -11,24 +11,9 @@ import "./Menu.css";
 export function Menu() {
   const [opcao, setOpcao] = useState<number>(1);
 
-  const pageMenu = () => {
-    setOpcao(1);
-  };
-  const pageSaibamais = () => {
-    setOpcao(2);
-  };
-  const quemSomos = () => {
-    setOpcao(3);
-  };
-  const contatos = () => {
-    setOpcao(4);
-  };
-  const formulario = () => {
-    setOpcao(5);
-  };
   const verificaQualPagina = () => {
     if (opcao == 1) {
-      return <Home />;
+      return <Home setOpcao={setOpcao} />;
     } else if (opcao == 2) {
       return <Saibamais />;
     } else if (opcao == 3) {
@@ -42,13 +27,13 @@ export function Menu() {
   return (
     <body>
       <header className="topo">
-        <a onClick={pageMenu}>
+        <a onClick={() => setOpcao(1)}>
           <img src={logo} alt="" />
         </a>
-        <a onClick={pageSaibamais}>Saiba mais</a>
-        <a onClick={quemSomos}>Quem somos</a>
-        <a onClick={contatos}>Contatos</a>
-        <a onClick={formulario}>Formulario</a>
+        <a onClick={() => setOpcao(2)}>Saiba mais</a>
+        <a onClick={() => setOpcao(3)}>Quem somos</a>
+        <a onClick={() => setOpcao(4)}>Contatos</a>
+        <a onClick={() => setOpcao(5)}>Formulario</a>
       </header>
       {verificaQualPagina()}
     </body>

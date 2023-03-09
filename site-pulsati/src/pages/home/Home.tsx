@@ -1,6 +1,10 @@
 import "./home.css";
 
-export function Home() {
+interface MenuProps {
+  setOpcao: (opcao: number) => void;
+}
+
+export function Home(props: MenuProps) {
   return (
     <div className="tudo">
       <main className="corpo">
@@ -16,8 +20,8 @@ export function Home() {
             de tecnologia.
           </h2>
           <div className="botaodiv">
-            <a href="pages/saibaMais.html">
-              <button>Saiba Mais</button>
+            <a>
+              <button onClick={() => props.setOpcao(2)}>Saiba Mais</button>
             </a>
           </div>
         </div>
