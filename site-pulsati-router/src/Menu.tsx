@@ -1,13 +1,11 @@
-import { useState } from "react";
-import logo from "../src/assets/logo.png";
 import { Contatos } from "./pages/contatos/Contatos";
 import { Formulario } from "./pages/formulario/Formulario";
 import { Home } from "./pages/home/Home";
 import { Quemsomos } from "./pages/quemsomos/Quemsomos";
 import { Saibamais } from "./pages/saibamais/Saibamais";
-
-import "./Menu.css";
 import { FormularioFinalizado } from "./pages/formularioFinalizado/FormularioFinalizado";
+import { MenuItem } from "./MenuItem";
+import "./Menu.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -15,16 +13,15 @@ export function Menu() {
   return (
     <body>
       <header className="topo">
-        <a href="/home">
-          <img src={logo} alt="" />
-        </a>
-        <a href="/saibamais">Saiba mais</a>
-        <a href="/quemsomos">Quem somos</a>
-        <a href="/contatos">Contatos</a>
+        <MenuItem titulo="Home" path="/home" />
+        <MenuItem titulo="Saiba mais" path="/saibamais" />
+        <MenuItem titulo="Contatos" path="/contatos" />
       </header>
+
       <div>
         <Router>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/saibamais" element={<Saibamais />} />
             <Route path="/quemsomos" element={<Quemsomos />} />
