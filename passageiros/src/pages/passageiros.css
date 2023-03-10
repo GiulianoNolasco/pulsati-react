@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../assets/fundo.jpg");
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+.titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  color: white;
+  font-size: 13rem;
+  padding: 5rem;
+}
+
+.titulo h1:hover {
+  text-shadow: 0 0 2rem white;
+}
+.saldoatualizadotitulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+.saldosh2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 9rem;
+}
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  /* min-width: 100vw;
+  min-height: 100vh; */
+  gap: 5rem;
+}
+.bloco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+.divtabela {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.729);
+  padding: 4rem;
+  border-radius: 2rem;
+  width: 90%;
+}
+.tabela {
+  width: 100%;
+  height: auto;
+  color: white;
+  font-size: 10rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+th {
+  font-size: 3rem;
+}
+td {
+  font-size: 2rem;
+  text-align: center;
+}
+td:hover {
+  background-color: rgba(129, 128, 128, 0.787);
+}
+
+i {
+  font-size: 2rem;
+}
+
+.excluirBotao i {
+  cursor: pointer;
+  color: red;
+}
+.excluirBotao i:hover {
+  text-shadow: 0 0 0.5rem white;
+  transform: scale(1.5);
+}
+
+td button {
+  font-size: 3rem;
+  color: red;
+  border: 0.1rem solid red;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alinhar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+}
+.option1 {
+  background-color: green;
+}
+.option2 {
+  background-color: red;
+}
+
+/* ################################################## Linhas ################################################## */
+
+.linha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  height: 25rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.textocard {
+  height: 20rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.textocard h2 {
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.sombrabranca:hover {
+  text-shadow: 0 0 2rem white;
+}
+
+.sombravermelha:hover {
+  text-shadow: 0 0 2rem red;
+}
+
+.sombraverde:hover {
+  text-shadow: 0 0 2rem green;
+}
+
+.sombrabranca:hover {
+  text-shadow: 0 0 2rem rgb(255, 255, 255);
+}
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.informacoes label {
+  color: white;
+  font-size: 2rem;
+}
+
+.informacoes input {
+  font-size: 2rem;
+}
+.botao {
+  height: 4rem;
+  width: 20rem;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.botao:hover {
+  box-shadow: 0 0 1rem white;
+  background-color: black;
+  color: white;
+  border: 0.1rem solid white;
+}
+.divlabeleinput {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+.esconder {
+  display: none;
+}
+
+optgroup {
+  font-size: 7rem !important;
+  text-align: left;
+}
+
+.ls-custom-select {
+  width: 100%;
+  background-color: red;
+  font-size: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ls-select {
+  width: 100%;
+}
+/* ################################################## Receita ################################################## */
+
+.divimg1 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/receita.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.divimg1:hover {
+  box-shadow: 0 0 2rem green;
+}
+
+.inputreceita {
+  font-size: 2rem;
+  color: green;
+  font-size: 2rem;
+}
+
+.inputdespesa {
+  font-size: 2rem;
+  color: red;
+  font-size: 2rem;
+}
+/* ################################################## Saida ################################################## */
+
+.divimg2 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/despesa.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.divimg2:hover {
+  box-shadow: 0 0 2rem red;
+}
+
+.inputdespesa {
+  font-size: 2rem;
+  color: red;
+}
+
+/* ################################################## Menu inicial ################################################## */
+
+.divimg3 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/Grafico.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.divimg3:hover {
+  box-shadow: 0 0 2rem rgb(255, 255, 255);
+}
+
+/* Media query ################################################################################ */
+
+@media screen and (max-width: 320px) {
+  * {
+    font-size: 25%;
+  }
+
+  .bloco {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 568px) {
+  * {
+    font-size: 27%;
+  }
+
+  .bloco {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  * {
+    font-size: 32%;
+  }
+
+  .bloco {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  * {
+    font-size: 37%;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  * {
+    font-size: 37%;
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1680px) {
+  * {
+    font-size: 40%;
+  }
+  .titulo {
+    font-size: 12rem;
+  }
+
+  .saldosh2 {
+    font-size: 8rem;
+  }
+
+  .tabela {
+    font-size: 15rem;
+  }
+
+  th {
+    font-size: 4rem;
+  }
+  td {
+    font-size: 3rem;
+  }
+
+  i {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1681px) {
+  * {
+    font-size: 45%;
+  }
+  .titulo {
+    font-size: 12rem;
+  }
+
+  .saldosh2 {
+    font-size: 8rem;
+  }
+
+  .tabela {
+    font-size: 15rem;
+  }
+
+  th {
+    font-size: 4rem;
+  }
+  td {
+    font-size: 3rem;
+  }
+
+  i {
+    font-size: 3rem;
+  }
+}
