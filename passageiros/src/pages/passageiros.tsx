@@ -26,6 +26,9 @@ export function Passageiros() {
                 <td>{passageiro.codigo}</td>
                 <td>{passageiro.nome}</td>
                 <td>{passageiro.capacidade}</td>
+                <td>
+                  <a href={`/passageiros/${passageiro.codigo}`}>Visualizar</a>
+                </td>
               </tr>
             );
           })}

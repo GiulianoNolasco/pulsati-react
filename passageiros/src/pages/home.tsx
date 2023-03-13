@@ -1,3 +1,7 @@
 export function Home() {
-  return <div>Aqui é a página home</div>;
+  return (
+    <div>
+      <img src="http://lorempixel.com.br/700" alt="" />
+    </div>
+  );
 }
