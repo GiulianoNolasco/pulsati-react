@@ -20,8 +20,10 @@ export function Passageiros() {
   };
   return (
     <div className="divtabela">
-      <span>Tela Passageiros</span>
-      <a href="/passageiros-novo">Criar Aeroporto</a>
+      <span>Tela Aeroportos</span>
+      <a href="/passageiros-novo">
+        <button>Criar Aeroporto</button>
+      </a>
       <table className="tabela">
         <thead>
           <td>Id</td>

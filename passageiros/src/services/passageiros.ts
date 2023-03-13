@@ -26,12 +26,8 @@ export function deletePassageiro(id: number) {
     .delete(`http://localhost:8000/aeroportos/${id}`);
 }
 
-export async function putPassageiro(id: number, dados: Aeroporto) {
-  alert(typeof id);
-  alert(typeof dados.capacidade);
-  alert(typeof dados.nome);
-  alert(typeof dados.codigo);
+export async function putPassageiro(dados: Aeroporto) {
   return axios
     .create({ headers: { "Content-Type": "application/json" } })
-    .put(`http://localhost:8000/aeroportos/:${id}`, dados);
+    .put(`http://localhost:8000/aeroportos/${dados.codigo}`, dados);
 }

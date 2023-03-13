@@ -12,20 +12,22 @@ function App() {
     <div className="App">
       <div>
         <a href="/home">Home|</a>
-        <a href="/passageiros">Passageiros</a>
+        <a href="/passageiros">Aeroportos</a>
       </div>
-      <Router>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/passageiros" element={<Passageiros />} />
-          <Route path="/passageiros/:id" element={<PassageirosVer />} />
-          <Route
-            path="/passageiros-atualizar/:id"
-            element={<PassageirosAtualizar />}
-          />
-          <Route path="/passageiros-novo" element={<PassageirosNovo />} />
-        </Routes>
-      </Router>
+      <div className="router">
+        <Router>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/passageiros" element={<Passageiros />} />
+            <Route path="/passageiros/:id" element={<PassageirosVer />} />
+            <Route
+              path="/passageiros-atualizar/:id"
+              element={<PassageirosAtualizar />}
+            />
+            <Route path="/passageiros-novo" element={<PassageirosNovo />} />
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }
