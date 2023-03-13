@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Aeroporto } from "../model/Aeroporto";
-import { buscarPassageiros, deletePassageiro } from "../services/passageiros";
-import "./passageiros.css";
+import { buscarAeroportos, deleteAeroporto } from "../services/passageiros";
+import "./aeroportos.css";
 
-export function Passageiros() {
-  const [passageiros, setpassageiros] = useState<any[]>();
+export function Aeroportos() {
+  const [aeroportos, setaeroportos] = useState<any[]>();
 
   const loadData = async () => {
-    const aeroportos: Aeroporto[] = await buscarPassageiros();
-    setpassageiros(aeroportos);
+    const aeroportos: Aeroporto[] = await buscarAeroportos();
+    setaeroportos(aeroportos);
   };
 
   useEffect(() => {
@@ -16,12 +16,12 @@ export function Passageiros() {
   }, []);
 
   const onClickDeleteAeroporto = (id: number) => {
-    deletePassageiro(id).then(() => loadData());
+    deleteAeroporto(id).then(() => loadData());
   };
   return (
     <div className="divtabela">
-      <span>Tela Aeroportos</span>
-      <a href="/passageiros-novo">
+      <span className="tituloSpan">Tela Aeroportos</span>
+      <a href="/aeroportos-novo">
         <button>Criar Aeroporto</button>
       </a>
       <table className="tabela">
@@ -31,23 +31,23 @@ export function Passageiros() {
           <td>Capacidade</td>
         </thead>
         <tbody>
-          {passageiros?.map((passageiro) => {
+          {aeroportos?.map((aeroporto) => {
             return (
               <tr>
-                <td>{passageiro.codigo}</td>
-                <td>{passageiro.nome}</td>
-                <td>{passageiro.capacidade}</td>
+                <td>{aeroporto.codigo}</td>
+                <td>{aeroporto.nome}</td>
+                <td>{aeroporto.capacidade}</td>
                 <td>
-                  <a href={`/passageiros/${passageiro.codigo}`}>Visualizar</a>
+                  <a href={`/aeroportos/${aeroporto.codigo}`}>Visualizar</a>
                 </td>
                 <td>
-                  <a href={`/passageiros-atualizar/${passageiro.codigo}`}>
+                  <a href={`/aeroportos-atualizar/${aeroporto.codigo}`}>
                     Atualizar
                   </a>
                 </td>
                 <td>
                   <button
-                    onClick={() => onClickDeleteAeroporto(passageiro.codigo)}
+                    onClick={() => onClickDeleteAeroporto(aeroporto.codigo)}
                   >
                     Apagar
                   </button>
