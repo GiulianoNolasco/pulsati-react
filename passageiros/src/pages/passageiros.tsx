@@ -1,18 +1,27 @@
-import { useState } from "react";
-import { buscarPassageiros } from "../services/passageiros";
+import { useEffect, useState } from "react";
+import { Aeroporto } from "../model/Aeroporto";
+import { buscarPassageiros, deletePassageiro } from "../services/passageiros";
 import "./passageiros.css";
 
 export function Passageiros() {
   const [passageiros, setpassageiros] = useState<any[]>();
-  if (!passageiros || passageiros.length == 0) {
-    const passageirosReq: any = buscarPassageiros();
-    passageirosReq.then((res: any) => {
-      setpassageiros(res.data);
-    });
-  }
+
+  const loadData = async () => {
+    const aeroportos: Aeroporto[] = await buscarPassageiros();
+    setpassageiros(aeroportos);
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const onClickDeleteAeroporto = (id: number) => {
+    deletePassageiro(id).then(() => loadData());
+  };
   return (
     <div className="divtabela">
       <span>Tela Passageiros</span>
+      <a href="/passageiros-novo">Criar Aeroporto</a>
       <table className="tabela">
         <thead>
           <td>Id</td>
@@ -28,6 +37,18 @@ export function Passageiros() {
                 <td>{passageiro.capacidade}</td>
                 <td>
                   <a href={`/passageiros/${passageiro.codigo}`}>Visualizar</a>
+                </td>
+                <td>
+                  <a href={`/passageiros-atualizar/${passageiro.codigo}`}>
+                    Atualizar
+                  </a>
+                </td>
+                <td>
+                  <button
+                    onClick={() => onClickDeleteAeroporto(passageiro.codigo)}
+                  >
+                    Apagar
+                  </button>
                 </td>
               </tr>
             );

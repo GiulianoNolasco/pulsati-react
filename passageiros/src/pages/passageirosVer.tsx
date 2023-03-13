@@ -14,6 +14,7 @@ export function PassageirosVer() {
       setpassageiro(res.data)
     );
   }
+
   return (
     <div className="divPassVer">
       <div className="borda">
