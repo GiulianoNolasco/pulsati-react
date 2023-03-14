@@ -1,18 +1,18 @@
-import { postAeroporto } from "../services/passageiros";
-import "./aeroportosNovo.css";
+import { postPassageiro } from "../services/passageiros";
+import "./passageirosNovo.css";
 
-export function AeroportosNovo() {
+export function PassageirosNovo() {
   const onSubmit = (evt: any) => {
     evt.preventDefault();
     const formData = new FormData(evt.target);
     const data = Object.fromEntries(formData);
-    postAeroporto({
+    postPassageiro({
       nome: data.nome.toString(),
-      capacidade: parseInt(data.capacidade.toString()),
+      codigoVoo: parseInt(data.codigoVoo.toString()),
     });
     alert(
-      `Aeroporto Criado: Nome: ${data.nome.toString()}, Capacidade: ${parseInt(
-        data.capacidade.toString()
+      `Passageiro Criado: Nome: ${data.nome.toString()}, Código Vôo: ${parseInt(
+        data.codigoVoo.toString()
       )}`
     );
   };
@@ -20,21 +20,21 @@ export function AeroportosNovo() {
   return (
     <div className="divtabela">
       <form onSubmit={onSubmit}>
-        <label>Criar novo Aeroporto</label>
+        <label>Criar novo Passageiro</label>
         <div className="linha">
           <span>Nome</span>
           <input type="text" name="nome" className="inputnormal" />
         </div>
 
         <div className="linha">
-          <span>Capacidade</span>
-          <input type="number" name="capacidade" className="inputnormal" />
+          <span>Código Vôo</span>
+          <input type="number" name="codigoVoo" className="inputnormal" />
         </div>
         <div className="linha">
           <input type="submit" value="Salvar" className="inputsalvar" />
         </div>
       </form>
-      <a href="/aeroportos">
+      <a href="/passageiros">
         <button>Voltar</button>
       </a>
     </div>

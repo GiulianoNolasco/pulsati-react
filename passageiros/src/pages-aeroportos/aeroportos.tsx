@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Aeroporto } from "../model/Aeroporto";
-import { buscarAeroportos, deleteAeroporto } from "../services/passageiros";
+import { buscarAeroportos, deleteAeroporto } from "../services/aeroportos";
 import "./aeroportos.css";
 
 export function Aeroportos() {

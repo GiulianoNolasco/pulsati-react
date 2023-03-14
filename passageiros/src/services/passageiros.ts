@@ -1,33 +1,33 @@
 import axios from "axios";
-import { Aeroporto } from "../model/Aeroporto";
+import { Passageiro } from "../model/Passageiro";
 
-export async function buscarAeroportos(): Promise<Aeroporto[]> {
+export async function buscarPassageiros(): Promise<Passageiro[]> {
   const { data } = await axios
     .create({ headers: { "Content-Type": "application/json" } })
-    .get("http://localhost:8000/aeroportos");
+    .get("http://localhost:8000/passageiros");
   return data;
 }
 
-export async function getAeroporto(id: number) {
+export async function getPassageiro(id: number) {
   return axios
     .create({ headers: { "Content-Type": "application/json" } })
-    .get(`http://localhost:8000/aeroportos/${id}`);
+    .get(`http://localhost:8000/passageiros/${id}`);
 }
 
-export async function postAeroporto(dados: Aeroporto) {
+export async function postPassageiro(dados: Passageiro) {
   return axios
     .create({ headers: { "Content-Type": "application/json" } })
-    .post(`http://localhost:8000/aeroportos`, dados);
+    .post(`http://localhost:8000/passageiros`, dados);
 }
 
-export function deleteAeroporto(id: number) {
+export function deletePassageiro(id: number) {
   return axios
     .create({ headers: { "Content-Type": "application/json" } })
-    .delete(`http://localhost:8000/aeroportos/${id}`);
+    .delete(`http://localhost:8000/passageiros/${id}`);
 }
 
-export async function putAeroporto(dados: Aeroporto) {
+export async function putPassageiro(dados: Passageiro) {
   return axios
     .create({ headers: { "Content-Type": "application/json" } })
-    .put(`http://localhost:8000/aeroportos/${dados.codigo}`, dados);
+    .put(`http://localhost:8000/passageiros/${dados.codigo}`, dados);
 }

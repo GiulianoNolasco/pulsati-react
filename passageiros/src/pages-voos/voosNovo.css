@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+.divtabela {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: gba(0, 0, 0, 0.729);
+  padding: 1rem;
+  background-color: rgb(5, 18, 169);
+  width: 80%;
+  box-shadow: 1rem 2rem 0 rgb(44, 43, 43);
+}
+
+form {
+  width: 100%;
+}
+.linha {
+  padding: 1rem;
+  height: auto;
+  color: white;
+  font-size: 7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+th {
+  font-size: 4rem;
+  font-weight: 700;
+}
+td {
+  width: 25rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+td a {
+  width: 25rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+td:hover {
+  background-color: rgba(129, 128, 128, 0.787);
+}
+
+i {
+  font-size: 5rem;
+}
+button {
+  font-size: 4rem;
+  padding: 1rem;
+  color: rgb(5, 18, 169);
+}
+button:hover {
+  font-size: 4rem;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(5, 18, 169);
+  border: 0.2rem solid white;
+}
+
+label {
+  font-size: 7rem;
+}
+.inputsalvar {
+  color: rgb(5, 18, 169);
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.inputsalvar:hover {
+  font-size: 4rem;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(5, 18, 169);
+  border: 0.2rem solid white;
+}
+
+.inputnormal {
+  font-size: 5rem;
+  color: rgb(5, 18, 169);
+}
+
+option {
+  font-size: 5rem;
+  color: rgb(5, 18, 169);
+}

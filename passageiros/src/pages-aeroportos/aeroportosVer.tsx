@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { getAeroporto } from "../services/passageiros";
+import { getAeroporto } from "../services/aeroportos";
 import "./aeroportosver.css";
 
 export function AeroportosVer() {

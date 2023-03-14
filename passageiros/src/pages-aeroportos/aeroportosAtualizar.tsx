@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { getAeroporto, putAeroporto } from "../services/passageiros";
+import { getAeroporto, putAeroporto } from "../services/aeroportos";
 
 import "./aeroportosAtualizar.css";
 
