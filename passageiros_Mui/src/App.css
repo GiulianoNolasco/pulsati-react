@@ -1,0 +1,44 @@
+* {
+  font-family: sans-serif;
+  color: white;
+  width: 100%;
+  min-height: 100%;
+}
+/* 
+a {
+  font-size: 5rem;
+  font-weight: 300;
+  color: white;
+} */
+
+.App {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  /* justify-content: left; */
+  /* align-items: flex-start; */
+  flex-direction: column;
+}
+
+.router {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerApp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 5rem;
+  font-weight: 300;
+  color: white;
+}
+
+.headerApp a {
+  font-size: 5rem;
+  font-weight: 300;
+  color: white;
+}
